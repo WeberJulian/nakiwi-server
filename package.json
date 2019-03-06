@@ -1,0 +1,32 @@
+{
+  "name": "Nakiwi-API",
+  "version": "0.0.1",
+  "description": "Nakiwi API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "discord-blackhole.logger": "^1.1.6",
+    "express": "^4.12.4",
+    "express-mongo-sanitize": "^1.3.2",
+    "mkdirp-sync": "0.0.3",
+    "mongodb": "^2.2.33",
+    "nodemailer": "^4.6.7",
+    "stripe": "^5.4.0",
+    "uid-generator": "^1.0.0",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "database"
+  ],
+  "license": "MIT"
+}
