@@ -15,9 +15,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(mongoSanitize({replaceWith: '_'}))
 
-const Logger = require("./logger.js")("./logs.txt");
-
-
 // Welcome
 
 app.get("/",  (req, res) => {

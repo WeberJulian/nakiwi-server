@@ -13,8 +13,6 @@ const uidgen = new UIDGenerator();
 const min = 1000 * 60;
 var tokenValidity = min * 3000;
 
-const Logger = require("./logger.js")("./logs.txt");
-
 module.exports = {
   
   
