@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 var mongodb = require('mongodb');
 var bcrypt = require('bcryptjs');
@@ -172,31 +173,3 @@ app.get("/order", async (req, res) => {
   var result = await dbserver.getOrder(url_parts.query.id)
   res.send(result)
 })
-
-// app.post("/updateProductMax", async (req, res) => {
-//   console.log(JSON.stringify(req.body))
-//   var result = await dbserver.updateProductMax({listInfo: req.body.listInfo._id, basket: req.body.basket})
-//   res.send(result)
-// })
-
-// var err, db = await mongodb.MongoClient.connect(uri);
-//       if(err) throw err;
-//       var users =  await db.collection('users');
-//       var monReq = {email: body.email.toLowerCase()}
-//       var dbUser = await users.findOne(monReq);
-//       var result = await module.exports.calTotal({basket: body.basket, listInfo: body.listInfo._id, payment: true, code: body.code, email: body.email.toLowerCase(), delivery: body.delivery})
-      
-//       const amount = result.total
-//       console.log("ammount " + amount)
-//       const customer = dbUser.cus
-//       const card = body.card.id
-//       try{
-//         var charge = await stripe.charges.create({
-//           amount: Math.ceil(amount * 100),
-//           currency: "gbp",
-//           card: card,
-//           customer: customer,
-//           description: "Charge for " + body.email
-//         })
-//         module.exports.updateProductMax({basket: body.basket, listInfo: body.listInfo.id})
-//       }
