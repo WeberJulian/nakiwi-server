@@ -7,7 +7,7 @@ const page = require('./pageBuilder');
 const validator = require('./validator.js');
 const stripe = require("stripe")(process.env.STRIPE_SK);
 
-var uri = 'mongodb://'+process.env.USER+':'+process.env.PASS+'@'+process.env.HOST+':'+process.env.PORT+'/'+process.env.DB;
+var uri = 'mongodb://'+process.env.DBUSER+':'+process.env.PASS+'@'+process.env.HOST+':'+process.env.PORT+'/'+process.env.DB;
 
 const uidgen = new UIDGenerator();
 const min = 1000 * 60;
